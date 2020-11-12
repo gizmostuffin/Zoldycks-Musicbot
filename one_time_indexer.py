@@ -23,7 +23,7 @@ async def main():
     try:
         for channel in CHANNELS:
             async for user_message in user_bot.iter_history(channel):
-                message = await user_bot.get_messages(
+                message = await bot.get_messages(
                     channel,
                     user_message.message_id,
                     replies=0
